@@ -7,6 +7,7 @@
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>
     <Name>PsScripts</Name>
+    <DebugArguments>-directory "c:\tmp\test" -clientfolder 'A test folder' -matterid '5345-001' -spsite 'https://maybrowning.sharepoint.com' -splibrary 'Closed Files' -zip -zipbase 'c:\tmp'</DebugArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,7 +28,7 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="Script.ps1" />
+    <Compile Include="SpUploadDirectory.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
