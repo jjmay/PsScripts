@@ -68,7 +68,7 @@ function SPUploadFile($filename, $relative_path_regex)
 			$added_file = Add-PnPFile -Folder $sp_folder -Stream $fsFile -FileName $sanitized_filename -Values $file_details -Checkout -CheckInComment "Intial Upload" -ErrorAction Stop
 			$log_entry_properties = @{
 				Date=Get-Date;
-				MatterID=$matter.id;
+				MatterID=$matterId;
 				File=$filename;
 				SP_File=$added_file.ServerRelativeUrl
 
